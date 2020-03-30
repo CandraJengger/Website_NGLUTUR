@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icons</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/best.css">
+    <link rel="icon" href="img/nglutur.png">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo"><a href="index.html">NGLUTUR.</a></div>
+        <div class="nav-links" id="nav-links">
+            <i class="fas fa-times" onclick="CloseMenu()"></i>
+            <ul>
+                <li><a href="place.html">Populer Location</a></li>
+                <li><a href="best.html">Icons</a></li>
+                <li><a href="new_listing.html">News Listing</a></li>
+            </ul>
+            <span>
+                <i class="clear fas fa-search cari1" onclick="OnSearch()" id="icon"></i>
+                <div class="search" id="search">
+                    <i class="fas fa-search"></i>
+                    <input type="search" name="search" class="cari2">
+                </div>
+            </span>
+        </div>
+        <i class="fas fa-bars" onclick="ShowMenu()"></i>
+    </nav>
+    <main class="main" id="main" >
+        <section id="sc-one" class="sec one">
+            <h3>GUDEG</h3>
+        </section>
+        <section id="sc-two" class="sec two">
+            <h3>MALIOBORO</h3>
+        </section>
+        <section id="sc-three" class="sec three">
+            <h3>CULTURE</h3>
+        </section>
+        <section id="sc-four" class="sec four">
+            <h3>BEACH</h3>
+        </section>
+        <section id="sc-five" class="sec five">
+            <h3>KERATON</h3>
+        </section>
+        <section id="sc-six" class="sec six">
+            <h1>Icons in Yogya</h1>
+        </section>
+        <section id="sc-seven" class="sec seven">
+            <h3>NATURE</h3>
+        </section>
+        <section id="sc-eight" class="sec eight">
+            <h3>TEMPLE</h3>
+        </section>
+    </main>
+
+ 
+
+
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        
+        const main = document.getElementById('main')
+        main.onclick = function (){
+            
+            show.style.right = "-300px";
+
+            let hWindow = $(window).width();
+            if(hWindow < 835) { 
+                $('#search').css('display','flex')
+                $('#search .fas').css('color','#333')
+            } else {
+                $('#search').css('display','none')
+                $('#icon').css('color','#333')
+            }
+        }
+        
+        // window.addEventListener('resize',function(e) {
+        //     const wWindow = e.target.innerWidth
+        //     const sec = document.getElementById('sc-one')
+        //     const cekDiv = document.querySelectorAll('div.container')
+        //     if(cekDiv.length == 4) {
+        //         console.log(cekDiv)
+        //         e.stopPropagation()
+        //     }
+        //     else if(wWindow < 460) {
+        //         const div = document.createElement('div')
+        //         div.setAttribute('class','container')
+        //         main.appendChild(div)
+
+        //         const f1 = document.getElementById('sc-one') 
+        //         const f2 = document.getElementById('sc-two') 
+        //         const f3 = document.getElementById('sc-three') 
+        //         const f4 = document.getElementById('sc-four') 
+                
+
+
+               
+        //     }
+        // })
+        
+    </script>
+</body>
+</html>

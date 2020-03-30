@@ -4,58 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NGLUTUR</title>
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/nglutur.png">
 </head>
-<body>
-    <div class="preloading" id="preloading">
+<body >
+    <!--<div class="preloading" id="preloading">
         <div class="loading">
             <img src="img/giphy.gif" alt="loading">
         </div>
-    </div>
-    <div class="hero">
-        <div class="navbar">
-            <div class="nav-logo">NGLUTUR.</div>
-            <div class="nav-links">
+    </div>-->
+    
+        <nav class="navbar">
+            <div class="nav-logo"><a href="index.html">NGLUTUR.</a></div>
+            <div class="nav-links" id="nav-links">
+                <i class="fas fa-times" onclick="CloseMenu()"></i>
                 <ul>
-                    <li><a href="#">Populer Location</a></li>
-                    <li><a href="#">Best Properties</a></li>
-                    <li><a href="#"> News Listing</a></li>
+                    <li><a href="place.html">Populer Location</a></li>
+                    <li><a href="best.html">Icons</a></li>
+                    <li><a href="new_listing.html">News Listing</a></li>
                 </ul>
-                <i class="clear fas fa-search"></i>
+                <span>
+                    <i class="clear fas fa-search cari1" onclick="OnSearch()" id="icon" ></i>
+                    <div class="" id="search">
+                        <i class="fas fa-search"></i>
+                        <input type="search" name="search" class="cari2">
+                    </div>
+                </span>
             </div>
-        </div>
-        <div class="sidebar">
-            <i class="fas fa-circle slide"></i>
-            <i class="fas fa-dot-circle slide" style="font-size: 13px;"></i>
-            <i class="fas fa-circle slide"></i>
-            <i class="fas fa-circle slide"></i>
-            
-        </div>
-        <div class="content">
-            <h1>Wonderfull</h1>
-            <h1>Yogyakarta</h1>
-            <p>Yogyakarta together with twin city Surakarta (Solo), is the cradle of <br> civilation on Java. This city was the seat of power that produced the <br> magnificent temples Borobudur and Prambanan in the 8th and 9th century <br> and the new powerful Mataram kingdom of the 16th and 17th century</p>
-            <div class="explore">Explore</div>
-        </div>
-        <div class="view">
-            <div class="list">
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <i class="fas fa-circle"></i>
-                <p>20 Best Place to Visit in Yogyakarta <br> <a href="#">More <i class="fas fa-arrow-right"></i></a></p>
+            <i class="fas fa-bars" onclick="ShowMenu()"></i>
+        </nav>
+        <main>
+            <div class="hero" onclick="OnReset()">
+                <!-- <div class="sidebar">
+                    <i class="fas fa-circle slide"></i>
+                    <i class="fas fa-dot-circle slide" style="font-size: 13px;"></i>
+                    <i class="fas fa-circle slide"></i>
+                    <i class="fas fa-circle slide"></i>
+                    
+                </div> -->
+                <div class="content">
+                    <h1>Wonderfull</h1>
+                    <h1>Yogyakarta</h1>
+                    <p>Yogyakarta together with twin city Surakarta (Solo), is the cradle of <br> civilation on Java. This city was the seat of power that produced the <br> magnificent temples Borobudur and Prambanan in the 8th and 9th century <br> and the new powerful Mataram kingdom of the 16th and 17th century</p>
+                    <div class="explore">Explore</div>
+                </div>
+                <!--
+                <div class="view">
+                    <div class="list">
+                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-circle"></i>
+                        <p>5 Best Place to Visit in Yogyakarta <br> <a href="#">More <i class="fas fa-arrow-right"></i></a></p>
+                    </div>
+                    <div class="image"></div>
+                </div>
             </div>
-            <div class="image"></div>
-        </div>
-    </div>
+            <div class="view2">
+                <div class="list">
+                    <i class="fas fa-circle"></i>
+                    <i class="fas fa-circle"></i>
+                    <i class="fas fa-circle"></i>
+                    <i class="fas fa-circle"></i>
+                    <p>5 Best Place to Visit in Yogyakarta <br> <a href="#">More <i class="fas fa-arrow-right"></i></a></p>
+                </div>
+                <div class="image"></div>
+            </div>-->
+        </main>
+    <script src="jquery/jquery-3.4.1.min.js"></script>
     <script>
-        let loading = document.getElementById('preloading');
-        window.addEventListener('load', function() {
-            loading.style.display = "none";
-        });
-    </script>
+        // let loading = document.getElementById('preloading');
+        // window.addEventListener('load', function() {
+        //     loading.style.display = "none";
+        // });
+        </script>
+        <script src="js/index.js"></script>
 </body>
 </html>

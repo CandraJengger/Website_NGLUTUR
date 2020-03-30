@@ -4,6 +4,10 @@
     font-family: sans-serif;
 }
 
+body {
+    height: 100vh;
+}
+
 /* Font */
 @font-face {
     font-family: alex-brush;
@@ -34,6 +38,7 @@
 
 /* Hero */
 .hero {
+    width: 100%;
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.3)),url(../img/bank.jpg);
     background-position: center;
@@ -44,16 +49,28 @@
 
 /*Navbar*/
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 92%;
     display: flex;
     padding: 35px 60px;
     color: #fff;
+    z-index: 1111;
+    transition: .2s;
 }
 
 .nav-logo {
     flex: 2;
-    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-logo a {
+    text-decoration: none;
+    color: #fff;
     font-family: calibri;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .nav-links {
@@ -63,7 +80,7 @@
 .nav-links ul {
     display: inline;
     list-style: none;
-    
+    transition: .2s;
 }
 
 .nav-links ul li {
@@ -75,12 +92,13 @@
 .nav-links ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 13px;
+    font-size: 15px;
 }
 
-.nav-links i {
+.nav-links .cari1 {
     cursor: pointer;
     float: right;
+    
 }
 
 .nav-links .clear {
@@ -92,13 +110,83 @@
     display: block;
     height: 2px;
     width: 0;
-    background-color: #fff;
+    background-color: #B28D58;
     transition: .5s;
     margin: auto;
 }
 
 .nav-links ul li:hover::after {
     width: 100%;
+}
+
+.navbar .fa-times,
+.navbar .fa-bars {
+    display: none;
+}
+
+#search {
+    display: none;
+}
+
+.nav-links .search {
+    position: absolute;
+    top: 30px;
+    left: 1207px;
+    width: 130px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 3px;
+    opacity: 0;
+    animation: animasiSearch 0.5s forwards;
+    transition: .3s;
+}
+
+@keyframes animasiSearch {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+    
+} 
+
+.nav-links .search i {
+    color:#000;
+    margin: 2px 6px 0 1px;
+    cursor: none;
+}
+
+.nav-links .cari2 {
+    height: 25px;
+    border-radius: 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #444;
+    font-size: 15px;
+}
+
+/* .nav-links span:hover .cari1 {
+    transform: translateX(-80px);
+    color: #000;
+} */
+
+/* .nav-links span:hover #search {
+    animation: animasiSearch 0.5s .3s forwards;
+} */
+
+.navbar.black {
+    background-color: rgba(0,0,0,0.9);
+    transition: 0.5s;
+    color: #fff;
+    padding: 20px 60px
+}
+
+.navbar.black .nav-links .search {
+    top : 15px;
 }
 
 /* Sidebar */
@@ -153,11 +241,17 @@
     line-height: 33px;
     background: #B28D58;
     color: #fff;
-    cursor: pointer;
-    
+    cursor: pointer;  
+    transition: 0.5s; 
 }
 
+.content .explore:hover {
+    transform: translateY(-3px);
+}
+
+
 /*review*/
+/*
 .view {
     display: flex;
     position: absolute;
@@ -197,4 +291,283 @@
     width: 170px;
     height: 120px;
 }
+*/
+/*review*/
+/*
+.view2 {
+    display: none;
+}
+*/
+@media screen and (max-width:1270px) {
+    .nav-links .search {
+        top: 60px;
+        left: 1077px;
+    }
+}
 
+@media screen and (max-width:1187px) {
+    .nav-links .search {
+        top: 60px;
+        left: 977px;
+    }
+}
+
+@media screen and (max-width:1144px) {
+    .nav-logo {
+        flex: 1;
+    }
+    .nav-links {
+        flex: 3;
+    }
+    .nav-links .search {
+        top: 25px;
+        left: 937px;
+        width: 130px;
+    }
+    .nav-links .search i {
+        color:#000;
+        margin: 2px 6px 0 1px;
+        cursor: none;
+        
+    }
+    
+    
+    /* .nav-links span:hover .cari1 {
+        transform: 0.7s;
+        color: transparent;
+    }
+    
+    .nav-links span:hover #search {
+        animation: animasiSearch 0.5s .3s forwards;
+    } */
+
+}
+
+@media screen and (max-width:1063px) {
+    .nav-links .search {
+        top: 25px;
+        left: 837px;
+        width: 130px;
+    }
+}
+
+
+
+@media screen and (max-width:863px) {
+    .nav-logo {
+        flex: 1;
+    }
+    .nav-links {
+        flex: 7;
+    }
+    .nav-links .search {
+
+        top: 60px;
+        left: 664px;
+        width: 130px;
+    }
+}
+
+@media screen and (max-width:835px) {
+
+    .nav-links {
+        flex: none;
+        position: fixed;
+        right: -300px;
+        top: 0;
+        bottom: 0;
+        width: 250px;
+        background-color: rgba(0, 0, 0, 0.95);
+        z-index: 11;
+        text-align: left;
+        transition: 0.5s;
+        padding: 100px 0;
+    }
+    .nav-links ul {
+        padding-right: 100px;
+    }
+    .nav-links ul li {
+        transform: none;
+        padding: 15px 0;
+    }
+    
+    .nav-links ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 17px;
+        display: block;
+    }
+
+    .nav-links ul li::after {
+        content: '';
+        overflow: hidden;
+    }
+
+    .nav-links .cari1 {
+        float: none;
+        margin: 20px 60px;
+        display: none;
+    }
+
+    .nav-links .fa-times {
+        display: block;
+        font-size: 25px;
+        margin-top: -60px;
+        margin-left: 50px;
+        margin-bottom: 70px;
+        cursor: pointer;
+    }
+
+    .navbar .fa-bars {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+        transform: translateX(-20px);
+        transition: 0.5s;
+    }
+
+    .navbar.black .fa-bars {
+        transform: translateX(-60px);
+    } 
+    
+    .navbar.black .nav-links ul {
+        margin-left: 0;
+    }
+    #search {
+        display: flex;
+        background-color: #fff;
+        position: absolute;
+        z-index: 111;
+        left: 45px;
+        top: 15px;
+        width: 100%;
+        display: flex;
+        border-radius: 20px;
+        padding: 3px;
+    }
+    .nav-links .search {
+        
+        opacity: 1;
+        
+    }
+    
+    .nav-links span {
+        display: block;
+        width: 60%;
+        position: relative;
+    }
+    .nav-links span:hover .cari1 {
+        transform: none;
+        color: none;
+        display: none;
+    }
+    
+    .nav-links span:hover #search {
+        animation: none
+    }
+    .nav-links #search .fa-search {
+        color:#000;
+        font-size: 17px;
+        padding: 2px;
+    }
+}
+
+@media screen and (max-width:683px) {
+    .content {
+        text-align: center;
+    }
+
+    .content .explore {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width:623px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .content {
+        margin-left: 35px;
+    }
+    .content .explore {
+        margin-top: -20px;
+    }
+}
+
+@media screen and (max-width:617px) {
+    .navbar {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .navbar.black {
+        padding-left: 40px;
+    }
+    .navbar.black .fa-bars {
+        transform: translateX(-28px);
+    } 
+    .hero {
+        background-position-x: -24px;
+        height: 100vh;
+    }
+    .view {
+        position: relative;
+        display: none;
+    }   
+    .content {
+        text-align: justify;
+        margin-left: 35px;
+    }
+    .content .explore {
+        margin-top: 60px;
+    }
+    /*
+    .view2 {
+        display: flex;
+        width: 100%;
+        height: 190px;
+        background: rgba(255,255,255,0.3);
+        padding: 20px;
+        box-sizing: border-box;
+        
+    }
+
+    .view2 .list {
+        flex: 2;
+        font-size: 5px;
+        color: #000;
+        position: relative;
+    }
+
+    .view2 .list p {
+        font-size: 15px;
+        margin-top: 25px;
+        margin-left: 30px;
+    }
+
+    .view2 .list p a {
+        margin-top: 39px;
+        display: block;
+        color: #000;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .view2 .image {
+        flex: 2;
+        background-image: url(../img/wp4189964-yogyakarta-wallpapers.jpg);
+        background-position: center;
+        background-size: cover;
+        width: 230px;
+        height: 150px;
+    }*/
+
+}
+
+@media screen and (max-width:345px) {
+    .hero {
+        height: 120vh;
+    }
+}

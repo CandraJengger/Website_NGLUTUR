@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Listing</title>
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/new.css">
+    <link rel="icon" href="img/nglutur.png">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo"><a href="index.html">NGLUTUR.</a></div>
+        <div class="nav-links" id="nav-links">
+            <i class="fas fa-times" onclick="CloseMenu()"></i>
+            <ul>
+                <li><a href="place.html">Populer Location</a></li>
+                <li><a href="best.html">Icons</a></li>
+                <li><a href="new_listing.html">News Listing</a></li>
+            </ul>
+            <span>
+                <i class="clear fas fa-search cari1" onclick="OnSearch()" id="icon"></i>
+                <div class="search" id="search">
+                    <i class="fas fa-search"></i>
+                    <input type="search" name="search" class="cari2">
+                </div>
+            </span>
+        </div>
+        <i class="fas fa-bars" onclick="ShowMenu()"></i>
+    </nav>
+    <main onclick="OnReset()">
+        <div class="hero" id="hero">
+            <dic class="hero-content">
+                <h1 class="header">News</h1>
+            </dic>
+        </div>
+        <section id="main-content">
+            <div class="body-content">
+                <div class="content">
+                    <h2 class="title-content">Informasi Tempat Wisata</h2>
+                    <p class="capt-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic qui sapiente, provident, fugiat nesciunt necessitatibus adipisci consequatur minus quis natus possimus. Iusto dicta incidunt quo quibusdam nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolorem, voluptates praesentium est quos perferendis cupiditate aperiam odio velit sapiente!</p>
+                </div>
+                <div class="content">
+                    <h2 class="title-content">Informasi Tempat Angkringan di Jogja</h2>
+                    <p class="capt-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic qui sapiente, provident, fugiat nesciunt necessitatibus adipisci consequatur minus quis natus possimus. Iusto dicta incidunt quo quibusdam nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolorem, voluptates praesentium est quos perferendis cupiditate aperiam odio velit sapiente! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, praesentium!</p>
+                </div>
+                <div class="content">
+                    <h2 class="title-content">Informasi Jajanan Khas Jogja</h2>
+                    <p class="capt-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic qui sapiente, provident, fugiat nesciunt necessitatibus adipisci consequatur minus quis natus possimus. Iusto dicta incidunt quo quibusdam nostrum. </p>
+                </div>
+                <div class="content">
+                    <h2 class="title-content">Informasi Budaya Yogyakarta</h2>
+                    <p class="capt-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic qui sapiente, provident, fugiat nesciunt necessitatibus adipisci consequatur minus quis natus possimus. Iusto dicta incidunt quo quibusdam nostrum. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, dicta. Et illo doloremque voluptates debitis facilis id tenetur nam optio, hic, praesentium iure totam non voluptatem aut eum ad vitae.</p>
+                </div>
+                <div class="content">
+                    <h2 class="title-content">Mari Bergabung di NGLUTUR.</h2>
+                    <div class="sub-content">
+                        <div class="sub-content-one">
+                            <img src="img/und.png" alt="logo-und" class="img-one">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis velit voluptatem fugiat reprehenderit sapiente dolorum reiciendis? Fugiat possimus saepe hic. Sunt deserunt harum alias eligendi ab eius similique, amet suscipit.</p>
+                        </div>
+                        <div class="sub-content-two">
+                            <h3>Sign Up</h3>
+                            <input type="email" name="email" id="email" placeholder="Email">
+                            <input type="password" name="password" id="password" placeholder="Password">
+                            <p>Have Account ? <a href="#">Sign In</a></p>
+                            <a href="#"><div class="btn-sign-up">
+                                Sign Up
+                            </div></a>
+                            <a href="#"><div class="btn-google">
+                                <i class="fab fa-google-plus-g"></i>Sign Up With Google
+                            </div></a>
+                            <a href="#"><div class="btn-facebook">
+                                <i class="fab fa-facebook-f"></i>Sign Up With Facebook
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <section class="main-footer">
+            <div class="footer-logo">
+                <h1>NGLUTUR.</h1>
+                <p>Kami temani perjalanan anda ketika berkunjung di Yogyakarta.</p>
+            </div>
+            <div class="footer-fitur">
+                <h2>Layanan Kami</h2>
+                <ul>
+                    <li><a href="place.html">Populer Location</a></li>
+                    <li><a href="best.html">Best Properties</a></li>
+                    <li><a href="new_listing.html">News Listing</a></li>
+                </ul>
+            </div>
+            <div class="footer-share">
+                <h2>Share :</h2>
+                <ul>
+                    <a href="#"><li><i class="fab fa-twitter"></i></li></a>
+                    <a href="#"><li><i class="fab fa-google-plus-g"></i></li></a>
+                    <a href="#"><li><i class="fab fa-instagram"></i></li></a>
+                    <a href="#"><li><i class="fab fa-facebook"></i></li></a>
+                    <a href="#"><li><i class="fab fa-pinterest"></i></li></a>
+                </ul>
+            </div>
+        </section>
+        <section class="copy-footer">
+            <p>Copyright @ NGLUTUR. | Your Digital Partner 2020. All rights reserved</p>
+            <a href="#hero">
+                <span id="toTop">
+                    <i class="fas fa-angle-up"></i>
+                </span>
+            </a>
+        </section>
+    </footer>
+
+    <script src="jquery/jquery-3.4.1.min.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+    </script>
+</body>
+</html>
